@@ -10,3 +10,8 @@ http://nbviewer.ipython.org/github/stonebig/winpython_afterdoc/blob/master/examp
 * Installing and using Julia / Ijulia / Julia_Magic 
 
 http://nbviewer.ipython.org/github/stonebig/winpython_afterdoc/blob/master/examples/installing_julia_and_ijulia.ipynb
+
+
+* scilab (not yet, but very close)
+
+http://nbviewer.ipython.org/github/stonebig/winpython_afterdoc/blob/master/examples/scilab_testing.ipynb
