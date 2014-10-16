@@ -15,3 +15,7 @@ http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/exam
 * scilab (not yet, but very close)
 
 http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/examples/scilab_testing.ipynb
+
+* testing / showcase of new releases :
+
+http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/examples/Winpython_checker.ipynb
