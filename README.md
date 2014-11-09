@@ -7,9 +7,9 @@ http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/tree/master/docs
 
 documentation about winpython (after)
 
-* Parametrizing and using cython 
+* Parametrizing and using cython and Numba compilers
 
-http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/examples/using_cython_under_winpython32bit.ipynb
+http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/examples/using_cython_and_numba_under_winpython.ipynb
 
 * Installing and using Julia / Ijulia / Julia_Magic 
 
