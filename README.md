@@ -1,6 +1,10 @@
 winpython_afterdoc
 ==================
 
+* Shipped with Winpython Documentation
+
+http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/tree/master/docs/
+
 documentation about winpython (after)
 
 * Parametrizing and using cython 
