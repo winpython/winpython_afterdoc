@@ -1,11 +1,11 @@
 winpython_afterdoc
 ==================
 
-* Shipped with Winpython Documentation
+* Documentation Shipped with Winpython 
 
 http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/tree/master/docs/
 
-documentation about winpython (after)
+
 
 * Parametrizing and using cython and Numba compilers
 
@@ -16,10 +16,7 @@ http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/exam
 http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/examples/installing_julia_and_ijulia.ipynb
 
 
-* scilab (not yet, but very close)
+* using scilab_magic
 
 http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/examples/scilab_testing.ipynb
 
-* testing / showcase of new releases :
-
-http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/examples/Winpython_checker.ipynb
