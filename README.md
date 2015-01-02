@@ -20,3 +20,7 @@ http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/exam
 
 http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/examples/scilab_testing.ipynb
 
+
+* Installing and using R / R_Magic 
+
+http://nbviewer.ipython.org/github/winpython/winpython_afterdoc/blob/master/examples/installing_R.ipynb
