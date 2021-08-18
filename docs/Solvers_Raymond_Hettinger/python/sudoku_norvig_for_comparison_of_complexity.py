@@ -193,7 +193,7 @@ hard1  = '.....6....59.....82....8....45........3........6..3.54...325..6.......
 hard2  = '8..........36......7..9.2...5...7.......457.....1...3...1....68..85...1..9....4..'    
 if __name__ == '__main__':
     test()
-    solve_all([hard2], "easy", 0)
+    solve_all([hard1], "easy", 0)
     #solve_all(from_file("easy50.txt", '========'), "easy", None)
     #solve_all(from_file("top95.txt"), "hard", None)
     #solve_all(from_file("hardest.txt"), "hardest", None)
