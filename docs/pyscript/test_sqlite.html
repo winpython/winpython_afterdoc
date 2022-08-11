@@ -1,7 +1,7 @@
 <html>
   <head>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body> 
   <py-env>
@@ -10,6 +10,11 @@
     <h1>Sqlite-utils Example</h1>
     <div id="myplot"></div>
     <py-script>
+
+# was ok with https://pyscript.net/2022.06.1/pyscript.js 
+# you can try last official release: https://pyscript.net/latest/pyscript.js and css
+# or current unstable master: https://pyscript.net/unstable/pyscript.js  and cssfrom __future__ import print_function, unicode_literals, division  # if Python2.7
+
 import sqlite_utils
 db = sqlite_utils.Database(memory=True)
 print(list(db.query("select 3 * 5")))

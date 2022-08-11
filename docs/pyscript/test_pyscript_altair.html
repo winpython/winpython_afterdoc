@@ -2,8 +2,10 @@
   <head>
      <title>Altair</title>
     <meta charset="utf-8">
-   <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
      <py-env>
       - altair
       - pandas
@@ -13,6 +15,10 @@
 <body>
 <div id="altair" style="width: 100%; height: 100%"></div>
 <py-script output="altair">
+# was ok with https://pyscript.net/2022.06.1/pyscript.js 
+# you can try last official release: https://pyscript.net/latest/pyscript.js and css
+# or current unstable master: https://pyscript.net/unstable/pyscript.js  and cssfrom __future__ import print_function, unicode_literals, division  # if Python2.7
+
 import altair as alt
 from vega_datasets import data
 
