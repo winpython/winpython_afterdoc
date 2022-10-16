@@ -8,10 +8,11 @@
   </head>
   <body> 
 </py-script>
-   <py-env>
-      - sqlite-utils
-      - pygad
-    </py-env>
+<py-config>
+    packages = [
+      "sqlite-utils", "pygad"
+    ]
+  </py-config>
     <h1>Sqlite-utils Example</h1>
     <div id="myplot"></div>
     <py-script>

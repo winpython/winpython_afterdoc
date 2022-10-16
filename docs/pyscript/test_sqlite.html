@@ -4,9 +4,11 @@
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body> 
-  <py-env>
-      - sqlite-utils
-    </py-env>
+    <py-config>
+      packages = [
+        "sqlite-utils"
+      ]
+    </py-config>
     <h1>Sqlite-utils Example</h1>
     <div id="myplot"></div>
     <py-script>
