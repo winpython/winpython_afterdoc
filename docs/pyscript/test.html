@@ -6,7 +6,7 @@
     <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.js"></script>
     <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.2.min.js"></script>
     <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.2.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@holoviz/panel@0.14.0/dist/panel.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@holoviz/panel@0.14.2/dist/panel.min.js"></script>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
@@ -15,7 +15,7 @@
         packages = [
           "bokeh",
           "numpy",
-          "panel==0.14.0", 
+          "panel==0.14.2", 
           "altair",
           "pandas",
           "vega_datasets"
@@ -23,9 +23,11 @@
       </py-config>
       
       <h1>Basic Example</h1> 
-    <div id="myapp"></div>
-        <py-script output="myapp"> 
-        # was ok with https://pyscript.net/2022.06.1/pyscript.js 
+    <div>
+        <py-terminal>
+    </div>
+        <py-script> 
+        # was ok with https://pyscript.net/2022.12.1/pyscript.js 
         # you can try last official release: https://pyscript.net/latest/pyscript.js and css
         # or current unstable master: https://pyscript.net/unstable/pyscript.js  and css
         
@@ -42,7 +44,7 @@
 
 
 
-    <py-script output="simple_app">
+    <py-script>
       import panel as pn
 
       slider = pn.widgets.FloatSlider(start=0, end=10, name='Amplitude')
@@ -58,7 +60,7 @@
  <div id="altair"></div>
 
 
- <py-script output="altair">
+ <py-script>
     import altair as alt
     from vega_datasets import data
     
@@ -93,13 +95,13 @@
         height=200
     ).add_selection(pts)
     
-    alt.vconcat(
+    display(alt.vconcat(
         rect + circ,
         bar
     ).resolve_legend(
         color="independent",
         size="independent"
-    )
+    ), target="altair")
  </py-script>
 </body>
 </html>
