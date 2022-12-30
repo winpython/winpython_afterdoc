@@ -15,7 +15,7 @@
           "vega_datasets"
         ]
       </py-config>
-      <py-script output="altair">
+      <py-script>
 import altair as alt
 from vega_datasets import data
 
@@ -50,13 +50,13 @@ bar = alt.Chart(source).mark_bar().encode(
     height=200
 ).add_selection(pts)
 
-alt.vconcat(
+display(alt.vconcat(
     rect + circ,
     bar
 ).resolve_legend(
     color="independent",
     size="independent"
-)
+), target="altair")
       </py-script>
     </body>
 </html>
