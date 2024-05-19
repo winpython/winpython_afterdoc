@@ -12,6 +12,11 @@
 ##   values is a dict of possible values, e.g. {'A1':'12349', 'A2':'8', ...}
 
 import os
+import sys
+try:
+    _is_gil_enabled = sys._is_gil_enabled()
+except:
+    _is_gil_enabled = True
 
 def cross(A, B):
     "Cross product of elements in A and elements in B."
@@ -155,9 +160,9 @@ def solve_all(grids, name='', showif=0.0, nbthreads=1):
     When showif is a number of seconds, display puzzles that take longer.
     When showif is None, don't display any puzzles."""
     def time_solve(grid):
-        start = time.time()
+        start = time.perf_counter()
         values = solve(grid)
-        t = time.time()-start
+        t = time.perf_counter()-start
         ## Display puzzles that take long enough
         if showif is not None and t > showif:
             display(grid_values(grid))
@@ -198,12 +203,12 @@ if __name__ == '__main__':
     test()
     nbsudoku = 40
     thread_list = ( 1, 2, 4, 8, 16)
-    print(f'there is {os.cpu_count()} logical processors, {os.cpu_count()/2} physical processors')
+    print(f'there is {os.cpu_count()} logical processors, {os.cpu_count()/2} physical processors, Gil Enabled = {_is_gil_enabled}')
     reference_delta = 0
     for nbthreads in thread_list:
-        startall = time.time()
+        startall = time.perf_counter()
         solve_all([hard2]*nbsudoku, "hard2", None, nbthreads=nbthreads)
-        new_delta = time.time()-startall
+        new_delta = time.perf_counter()-startall
         if reference_delta ==0 :
            reference_delta = new_delta
         ratio = reference_delta/(new_delta) 
