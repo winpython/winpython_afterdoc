@@ -18,6 +18,11 @@ import os
 import re
 import time, random
 from concurrent.futures import ThreadPoolExecutor
+import sys
+try:
+    _is_gil_enabled = sys._is_gil_enabled()
+except:
+    _is_gil_enabled = True
 
 DigitSet = str  # e.g. '123'
 Square   = str  # e.g. 'A9'
@@ -141,9 +146,9 @@ def solve_all(puzzles, name, showif=0.0, nbthreads=1):
     When showif is a number of seconds, display puzzles that take longer.
     When showif is None, don't display any puzzles."""
     def time_solve(puzzle):
-        start = time.time()
+        start = time.perf_counter()
         solution = search(constrain(puzzle))
-        t = time.time()-start
+        t = time.perf_counter()-start
         ## Display puzzles that take long enough
         if showif is not None and t > showif and is_solution(solution, puzzle):
             print('\nPuzzle            ', sep, 'Solution')
@@ -215,16 +220,16 @@ if __name__ == '__main__':
     #print(picture(grid1))
     nbsudoku = 40
     thread_list = ( 1, 2, 4, 8, 16)
-    print(f'there is {os.cpu_count()} logical processors, {os.cpu_count()/2} physical processors')
+    print(f'there is {os.cpu_count()} logical processors, {os.cpu_count()/2} physical processors, Gil Enabled = {_is_gil_enabled}')
     reference_delta = 0
     my_puzzles = parse_grids([hard2]*nbsudoku)
     for nbthreads in thread_list:
-        startall = time.time()
+        startall = time.perf_counter()
         #hardest  = parse_grids(open('hardest.txt'))
         #grids10k = parse_grids(open('sudoku10k.txt'))
         #solve(puzzles=my_puzzles, verbose=False)
         solve_all(puzzles=my_puzzles, name='hard2', showif=None, nbthreads=nbthreads) 
-        new_delta = time.time()-startall
+        new_delta = time.perf_counter()-startall
         if reference_delta ==0 :
            reference_delta = new_delta
         ratio = reference_delta/(new_delta) 
